@@ -1,0 +1,14 @@
+# Large data files - don't commit raw pcaps/logs to git
+data/raw/*
+!data/raw/.gitkeep
+
+# Keys and secrets - NEVER commit these
+*.pem
+*.ppk
+*.key
+
+# OS/editor junk
+.DS_Store
+*.swp
+__pycache__/
+*.pyc
