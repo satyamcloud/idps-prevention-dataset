@@ -34,3 +34,13 @@
   logs action + latency to response_log.json
 - Measured action_latency in test: 0.0037 seconds
 - Confirmed block is effective: post-block ping from attacker to victim fails
+
+## DVWA (web-attack target)
+- Installed on victim VM: Apache + MariaDB + PHP 8.5.4
+- DB: dvwa_user / dvwa (config in /var/www/html/config/config.inc.php)
+- Security level: Low (attacks succeed unfiltered - needed for realistic
+  detection/response testing)
+- Verified working: manual SQLi test (1' OR '1'='1) returned all 5 users
+- Known non-blocking issues: reCAPTCHA key missing, mod_rewrite not enabled
+  (neither needed for our attack categories - SQLi, XSS)
+- Login: admin / password (default, fine for isolated testbed)
