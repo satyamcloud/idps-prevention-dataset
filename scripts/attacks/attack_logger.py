@@ -8,7 +8,7 @@ import json
 import datetime
 import os
 
-LOG_PATH = os.path.expanduser("~/attack_log.json")
+LOG_PATH = "/home/ubuntu/attack_log.json"
 
 def log_attack_session(session_id, attack_category, tool, command,
                         start_ts, end_ts, source_ip, target_ip,
