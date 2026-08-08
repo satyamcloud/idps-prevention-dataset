@@ -6,7 +6,13 @@ import datetime
 EVE_LOG = "/var/log/suricata/eve.json"
 RESPONSE_LOG = "/home/ubuntu/response_log.json"
 
-blocked_ips = set()
+def is_ip_blocked(ip):
+    """Check actual iptables state instead of trusting in-memory cache."""
+    result = subprocess.run(
+        ["iptables", "-C", "INPUT", "-s", ip, "-j", "DROP"],
+        capture_output=True
+    )
+    return result.returncode == 0  # 0 means the rule EXISTS
 
 def block_ip(ip):
     subprocess.run(["iptables", "-A", "INPUT", "-s", ip, "-j", "DROP"], check=True)
@@ -24,7 +30,7 @@ def main():
         stdout=subprocess.PIPE,
         text=True
     )
-    print("Auto-response script started, watching for alerts...")
+    print("Auto-response script started (stateless - checks live iptables state each time)...")
     for line in proc.stdout:
         line = line.strip()
         if not line:
@@ -46,12 +52,11 @@ def main():
 
         response_time = datetime.datetime.now(datetime.timezone.utc)
 
-        if src_ip in blocked_ips:
+        if is_ip_blocked(src_ip):
             action = "already_blocked"
         else:
             try:
                 block_ip(src_ip)
-                blocked_ips.add(src_ip)
                 action = "block_ip"
             except subprocess.CalledProcessError as e:
                 action = "block_failed"
