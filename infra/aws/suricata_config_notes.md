@@ -44,3 +44,18 @@
 - Known non-blocking issues: reCAPTCHA key missing, mod_rewrite not enabled
   (neither needed for our attack categories - SQLi, XSS)
 - Login: admin / password (default, fine for isolated testbed)
+
+## Alert throttling (IMPORTANT - affects response_log completeness)
+Suricata's ET Open scan-detection rules include built-in per-source-IP
+rate limiting: `threshold: type limit, count 5, seconds 60, track by_src`
+(confirmed on sig 2010935/2010936/2010937 - MSSQL/Oracle/MySQL scan rules).
+
+This means: repeated identical attacks from the same source within a 60s
+window will NOT all generate fresh Suricata alerts after the 5th one -
+this is Suricata working as designed, not a pipeline bug.
+
+Implication for dataset: attack_log.json will contain MORE sessions than
+response_log.json has corresponding alert-triggered entries. This gap is
+expected and should be labeled during Phase 4 as a distinct outcome
+category (e.g. "attack_occurred_no_fresh_alert_due_to_threshold") rather
+than treated as missing/broken data.
