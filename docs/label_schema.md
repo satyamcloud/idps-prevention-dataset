@@ -24,3 +24,18 @@ window) should be labeled based on:
    at all)
 2. If no alert in eve.json either -> label as "not_detected_due_to_threshold"
    or "not_detected" depending on whether this is the >5th repeat in 60s
+
+## Brute-force category - Phase 1 validation run (2026-08-09)
+
+- 25 attack sessions executed via Hydra against vsftpd (weak test account)
+- Custom Suricata rule (sid 9000001) required - default ET ruleset only
+  detects FTP brute-force via SERVER response pattern (sid 2002383), not
+  attacker request pattern - required self-block protection fix in
+  auto_response.py (see suricata_config_notes.md)
+- 276 response_log entries: 1x block_ip (fresh), ~263x already_blocked
+  (correct recognition across sustained 45+ min run), ~12x
+  skipped_self_block_protection (unrelated background APT traffic noise -
+  a real example of noise Phase 4 processing must filter)
+- No alert threshold suppression observed for custom rule (unlike ET's
+  built-in scan rules) - custom threshold clause (count 3, seconds 20,
+  track by_src) resets per-window rather than hard-limiting total alerts
