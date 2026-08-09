@@ -76,3 +76,26 @@ Confirmed working: correctly flags attacker src_ip, triggers real block_ip.
 
 Lesson: always verify which side of a connection (client vs server) a
 signature's src_ip refers to before wiring it into an auto-response system.
+
+## Custom Suricata rule - Volumetric DoS/SYN flood
+Default signature 2210063 ("STREAM 3way handshake excessive different SYNs")
+is a stream-engine internal heuristic (stream-event:3whs_syn_flood, tracked
+BY_FLOW with backoff threshold) - NOT a general rate-based SYN flood
+detector. hping3's per-packet source port randomization means each packet
+looks like a new flow, so this signature fires unpredictably and is not
+usable for reliable volumetric DoS detection.
+
+Added custom rule (sid 9000002) for reliable detection:
+  threshold: type threshold, track by_src, count 100, seconds 5
+Targets port 80 specifically. Confirmed working at hping3 rate -i u500
+(~2000 pps): 190 alerts / 10s test, 0 kernel_drops, correct attacker
+src_ip attribution.
+
+Rate tuning notes:
+- Uncapped --flood (~259k pps): massive kernel_drops (59%), alert queue
+  overflow (92k/99k alerts suppressed) - too aggressive for clean data
+- -i u500 (~2000 pps): 0 kernel_drops, clean detection - USE FOR "loud"
+- Lesson: always verify signature firing mechanism (by_src vs by_flow,
+  rate-based vs anomaly-based) before assuming a hping3 rate will produce
+  clean, attributable alerts.
+
