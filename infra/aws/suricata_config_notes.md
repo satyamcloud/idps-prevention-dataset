@@ -99,3 +99,31 @@ Rate tuning notes:
   rate-based vs anomaly-based) before assuming a hping3 rate will produce
   clean, attributable alerts.
 
+## IMPORTANT INCIDENT - Self-lockout via auto-response (2026-08-09)
+During DoS slow/L7 testing, a Suricata alert ("STREAM excessive
+retransmissions") fired on the operator's own SSH/management IP
+(likely a transient network hiccup, not an actual attack), and
+auto_response.py auto-blocked it - locking out SSH access entirely.
+EC2 Instance Connect was also blocked since victim-sg only allowed
+SSH from "My IP" (which was now itself blocked at the iptables layer).
+Recovery required a full instance reboot (clears iptables) plus a
+temporary security-group SSH-from-anywhere opening (immediately
+reverted after).
+
+ROOT CAUSE: KNOWN_SAFE_IPS in auto_response.py only protected the
+victim's own IP, not the operator's management/SSH IP.
+
+FIX APPLIED: Added operator's IP to KNOWN_SAFE_IPS.
+
+LESSON FOR DATASET DESIGN: This is a real, citable finding - naive
+auto-response IPS systems risk locking out legitimate administrators
+on false-positive alerts against management traffic. Real IPS
+deployments need an explicit "trusted management IP" allowlist,
+separate from "protected asset" allowlist. Worth a sentence in the
+paper's discussion/limitations section.
+
+OPERATIONAL NOTE: Operator's home/mobile IP may change over time
+(ISP-assigned) - if this happens again, re-verify current IP via
+`curl ifconfig.me` and update KNOWN_SAFE_IPS accordingly.
+
+
