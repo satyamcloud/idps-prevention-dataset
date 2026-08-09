@@ -6,13 +6,18 @@ import datetime
 EVE_LOG = "/var/log/suricata/eve.json"
 RESPONSE_LOG = "/home/ubuntu/response_log.json"
 
+# Never auto-block our own infrastructure, regardless of what an alert's
+# src_ip field says (some signatures fire on server-side response traffic,
+# not attacker-originated traffic - e.g. "FTP Brute-Force attempt response")
+KNOWN_SAFE_IPS = {"10.0.9.216"}  # victim's own private IP
+
 def is_ip_blocked(ip):
     """Check actual iptables state instead of trusting in-memory cache."""
     result = subprocess.run(
         ["iptables", "-C", "INPUT", "-s", ip, "-j", "DROP"],
         capture_output=True
     )
-    return result.returncode == 0  # 0 means the rule EXISTS
+    return result.returncode == 0
 
 def block_ip(ip):
     subprocess.run(["iptables", "-A", "INPUT", "-s", ip, "-j", "DROP"], check=True)
@@ -28,7 +33,8 @@ def main():
     proc = subprocess.Popen(
         ["tail", "-F", "-n0", EVE_LOG],
         stdout=subprocess.PIPE,
-        text=True
+        text=True,
+        bufsize=1
     )
     print("Auto-response script started (stateless - checks live iptables state each time)...")
     for line in proc.stdout:
@@ -52,7 +58,9 @@ def main():
 
         response_time = datetime.datetime.now(datetime.timezone.utc)
 
-        if is_ip_blocked(src_ip):
+        if src_ip in KNOWN_SAFE_IPS:
+            action = "skipped_self_block_protection"
+        elif is_ip_blocked(src_ip):
             action = "already_blocked"
         else:
             try:
