@@ -9,7 +9,7 @@ RESPONSE_LOG = "/home/ubuntu/response_log.json"
 # Never auto-block our own infrastructure, regardless of what an alert's
 # src_ip field says (some signatures fire on server-side response traffic,
 # not attacker-originated traffic - e.g. "FTP Brute-Force attempt response")
-KNOWN_SAFE_IPS = {"10.0.9.216"}  # victim's own private IP
+KNOWN_SAFE_IPS = {"10.0.9.216", "122.161.78.71"}  # victim's own private IP
 
 def is_ip_blocked(ip):
     """Check actual iptables state instead of trusting in-memory cache."""
