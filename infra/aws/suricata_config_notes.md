@@ -59,3 +59,20 @@ response_log.json has corresponding alert-triggered entries. This gap is
 expected and should be labeled during Phase 4 as a distinct outcome
 category (e.g. "attack_occurred_no_fresh_alert_due_to_threshold") rather
 than treated as missing/broken data.
+
+## Custom Suricata rule - FTP brute-force (attacker-directed detection)
+Default ET Open ruleset only has a RESPONSE-side FTP brute-force signature
+(sid 2002383, "ET SCAN Potential FTP Brute-Force attempt response") which
+fires on src_ip = SERVER (repeated rejection responses), not the attacker.
+Blindly blocking alert src_ip on this signature would self-block our own
+victim server - caught and fixed with a KNOWN_SAFE_IPS guard in
+auto_response.py.
+
+Added custom rule (sid 9000001) in /var/lib/suricata/rules/local.rules
+to directly detect attacker-side rapid connection attempts:
+  threshold: type threshold, track by_src, count 3, seconds 20
+Registered in suricata.yaml rule-files list alongside suricata.rules.
+Confirmed working: correctly flags attacker src_ip, triggers real block_ip.
+
+Lesson: always verify which side of a connection (client vs server) a
+signature's src_ip refers to before wiring it into an auto-response system.
