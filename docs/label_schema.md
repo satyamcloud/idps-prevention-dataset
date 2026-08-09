@@ -39,3 +39,22 @@ window) should be labeled based on:
 - No alert threshold suppression observed for custom rule (unlike ET's
   built-in scan rules) - custom threshold clause (count 3, seconds 20,
   track by_src) resets per-window rather than hard-limiting total alerts
+
+## DoS (volumetric) category - Phase 1 validation run (2026-08-09)
+
+- 25 attack sessions executed via hping3 SYN flood against port 80
+- Default Suricata signature 2210063 (stream-event:3whs_syn_flood) found
+  UNRELIABLE for this purpose - it's a by_flow internal heuristic, not a
+  rate-based detector; hping3's per-packet source port randomization
+  defeats it. See suricata_config_notes.md for full rate-tuning findings.
+- Custom rule (sid 9000002) required: threshold type threshold, track
+  by_src, count 100, seconds 5 - reliable and predictable.
+- Rate tuning: uncapped --flood (~259k pps) caused 59% kernel packet drops
+  and massive alert queue overflow - unusable for clean data. Settled on
+  -i u500 (~2000 pps) for "loud" - 0 kernel_drops, clean detection.
+- 4023 response_log entries: 1x block_ip (fresh), 4022x already_blocked
+  (correct sustained recognition across entire 25-session, ~31min batch)
+- 0x self-block issues (this rule only matches external->victim traffic,
+  unlike the FTP brute-force response-signature issue)
+
+
