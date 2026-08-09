@@ -58,3 +58,32 @@ window) should be labeled based on:
   unlike the FTP brute-force response-signature issue)
 
 
+## DoS (slow/L7) category - Phase 1 validation run (2026-08-09)
+
+- 25 attack sessions executed via Slowloris (50 sockets loud / 25 sockets
+  stealthy), against port 80
+- ZERO alerts fired during the actual 25-session batch - confirmed
+  reproducible non-detection, not a pipeline gap
+- Attempted custom detection rule (sid 9000003) using stream_size keyword
+  to catch long-lived low-data connections - did NOT fire. Root cause:
+  Suricata's stream_size condition is only re-evaluated on new packet
+  arrival; Slowloris's defining behavior (long idle periods between
+  minimal keep-alive sends) means the condition rarely gets re-checked
+  during the actual "slow" phase of the attack.
+- DECISION: Documented as legitimate "not_detected" outcome rather than
+  engineering a connection-state-monitoring workaround (deferred as
+  future enhancement - see Option A note below)
+- This is a genuine, citable finding: naive signature-based IDS rules
+  are fundamentally limited against low-and-slow attacks; real defenses
+  need connection-table/timeout-based monitoring (e.g., Apache
+  mod_reqtimeout), not packet-inspection signatures
+- FUTURE ENHANCEMENT (not yet built): a script-based connection monitor
+  (e.g., periodic `ss -tn` polling) could provide genuine detection for
+  this category if revisited later
+
+## IMPORTANT: incidental finding from testing
+Default (unreduced) Slowloris socket count (150) DOES trigger the
+volumetric DoS rule (sid 9000002) due to the initial connection burst,
+even though Slowloris is nominally a "low and slow" attack. Reduced to
+50/25 sockets specifically to keep this category's data distinct from
+DoS volumetric.
