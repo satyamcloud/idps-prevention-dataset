@@ -87,3 +87,25 @@ volumetric DoS rule (sid 9000002) due to the initial connection burst,
 even though Slowloris is nominally a "low and slow" attack. Reduced to
 50/25 sockets specifically to keep this category's data distinct from
 DoS volumetric.
+
+## Web attack category - Phase 1 validation run (2026-08-11)
+
+- 25 attack sessions executed via SQLmap against DVWA SQLi page
+  (17 loud --dbs / 8 stealthy --level=1 --risk=1)
+- Bug found and fixed: initial script used command.split() which broke
+  the --cookie argument (contains a space); fixed with shlex.split()
+  and single-quoted f-string. Also added --timeout=5 --retries=1 to
+  sqlmap itself so it fails fast on being blocked rather than retrying
+  for the full subprocess timeout window.
+- Default ET ruleset provides RICH signature diversity for this category
+  (unlike bruteforce/DoS which needed custom rules): confirmed firing
+  signatures include ET SCAN Sqlmap SQL Injection Scan (sid 2008538),
+  ET WEB_SERVER UNION SELECT, XSS script tag, MSSQL xp_cmdshell attempt,
+  MySQL information_schema access, /etc/passwd in URI.
+- sid 2008538 has built-in threshold (count 2, seconds 40, track by_src) -
+  similar to Day-1 scan-rule throttling. Combined with fast blocking
+  (~11s/session), most sessions only trigger 1 alert before being cut
+  off, so response_log entries are sparse (3 total across 25 sessions)
+  despite consistent, correct detection every session (confirmed via
+  attack_log outcome notes: all sessions show "blocked_midscan").
+- 25/25 attack_log entries, all consistently detected and blocked
