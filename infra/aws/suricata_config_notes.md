@@ -126,4 +126,11 @@ OPERATIONAL NOTE: Operator's home/mobile IP may change over time
 (ISP-assigned) - if this happens again, re-verify current IP via
 `curl ifconfig.me` and update KNOWN_SAFE_IPS accordingly.
 
-
+## Web attack category - SQLmap detection (2026-08-11)
+Default ET Open ruleset includes a dedicated signature for SQLmap traffic:
+  sid 2008538, "ET SCAN Sqlmap SQL Injection Scan"
+  Tagged: MITRE T1190 (Exploit Public-Facing Application)
+Fires correctly on attacker src_ip based on SQLmap's user-agent string
+("sqlmap/x.x.x"). NO custom rule needed for this category - confirmed
+working immediately, unlike bruteforce/DoS categories which both
+required custom rules.
