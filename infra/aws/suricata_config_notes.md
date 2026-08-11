@@ -134,3 +134,27 @@ Fires correctly on attacker src_ip based on SQLmap's user-agent string
 ("sqlmap/x.x.x"). NO custom rule needed for this category - confirmed
 working immediately, unlike bruteforce/DoS categories which both
 required custom rules.
+
+## Pcap logging enabled (2026-08-11)
+Discovered pcap-log was disabled by default - eve.json flow events alone
+are insufficient for proper Phase 4 feature extraction (NFStream/
+CICFlowMeter need raw packets for the full 80+ feature set, not
+Suricata's summarized flow JSON).
+
+Fixed: enabled pcap-log in suricata.yaml (limit: 300mb, max-files: 5,
+~1.5GB total cap, fits comfortably in available disk space of 2.9GB).
+NOTE: config value must be "300mb" with NO SPACE - "300 mb" silently
+fails to create output file despite no error in systemd journal (only
+visible via `suricata -T -v` verbose test mode).
+Suricata appends unix timestamp to rotated pcap filenames
+(log.pcap.<timestamp>), not a plain "log.pcap" - glob patterns should
+account for this.
+
+IMPORTANT: all data collected BEFORE this fix (Aug 9-11 testing +
+overnight 210-session run) lacks raw pcap - only has eve.json flow
+summaries. This includes the full 6-category overnight validation run.
+DECISION NEEDED: treat as pilot/test data and redo full collection with
+pcap enabled, or accept Suricata's summarized flow features as the
+dataset's feature set (smaller feature space than NFStream/CICFlowMeter
+would provide, but methodologically valid - some published IDS datasets
+use IDS-derived flow logs rather than raw-pcap-derived features).
