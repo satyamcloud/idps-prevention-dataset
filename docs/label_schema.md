@@ -109,3 +109,25 @@ DoS volumetric.
   despite consistent, correct detection every session (confirmed via
   attack_log outcome notes: all sessions show "blocked_midscan").
 - 25/25 attack_log entries, all consistently detected and blocked
+
+## Botnet beacon category - Phase 1 validation run (2026-08-11)
+
+- 25 attack sessions executed via curl-based periodic check-ins
+  (17 loud: 8 beacons @ 8s intervals / 8 stealthy: 5 beacons @ 15s intervals)
+- SIMPLIFICATION NOTE: real botnet beaconing is victim->C2 (compromised
+  host phoning home to attacker infrastructure). Implemented here as
+  attacker->victim periodic requests to keep pipeline consistent with
+  all other categories (victim-side Suricata detection). This is a
+  documented simplification, not full C2 emulation - should be stated
+  explicitly as a limitation in the dataset paper.
+- Detection finding: signature 2221036 ("SURICATA HTTP Response
+  excessive header repetition") fired consistently (184 instances across
+  batch) - but same pattern as FTP brute-force: alert's src_ip is the
+  VICTIM (server response), not the attacker (beacon requester). Self-
+  block protection correctly prevented self-blocking (confirmed 8/8 in
+  single-session test, consistent across full batch).
+- RESULT: detected via server-side artifact only, NOT actionable against
+  the actual attacker IP with current ruleset - similar category to
+  DoS slow/L7 (detectable symptom exists, but no clean attacker-directed
+  block possible without further custom rule engineering)
+- 25/25 attack_log entries logged successfully; no self-inflicted blocks
