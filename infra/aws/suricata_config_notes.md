@@ -158,3 +158,52 @@ pcap enabled, or accept Suricata's summarized flow features as the
 dataset's feature set (smaller feature space than NFStream/CICFlowMeter
 would provide, but methodologically valid - some published IDS datasets
 use IDS-derived flow logs rather than raw-pcap-derived features).
+
+
+## CRITICAL: Full-scale run bugs found (2026-09-04)
+Attempted first full-scale (35 sessions/category) collection run.
+Found THREE real bugs, all now understood:
+
+1. hping3 requires raw-socket (root) permissions. run_all_categories.py
+   was invoked with plain `python3`, not `sudo python3` - ALL 35
+   DoS-volumetric sessions failed silently (0.10s duration each,
+   "Operation not permitted"), but were mislabeled as "completed"
+   since the script only checked stdout for specific failure strings,
+   not permission errors. FIX NEEDED: run master script with sudo,
+   AND add explicit permission-error detection to
+   dos_volumetric_attack.py's outcome logic.
+
+2. run_all_categories.py never flushes iptables between categories.
+   Brute-force's first session correctly triggered a block (working
+   as designed) - but since nothing clears it before the next category
+   starts, EVERY SUBSEQUENT CATEGORY (DoS volumetric, slowloris,
+   web-attack, and likely botnet-beacon) ran against an
+   already-permanently-blocked attacker IP for the rest of the run.
+   This invalidates most of this run's data beyond category 1
+   (reconnaissance). FIX NEEDED: master script must flush iptables on
+   the victim VM between each category - requires either SSH-from-script
+   coordination, or manual intervention between categories rather than
+   full unattended operation.
+
+3. subprocess.run(timeout=MAX_ATTACK_SECONDS) did NOT reliably kill
+   Hydra's stealthy variant (-t 1 -W 3). Found 11 orphaned hydra
+   processes still running/hung, spanning ~1 hour, after the script
+   had already moved on to later categories. Root cause not yet fully
+   understood - possibly Hydra spawning child processes that escape
+   the parent timeout, or a signal-handling quirk. FIX NEEDED:
+   investigate further, possibly use `timeout` command wrapper (like
+   we already do in some other scripts) rather than relying solely on
+   subprocess's own timeout parameter for Hydra specifically.
+
+DECISION: This entire run's data (started 13:17, killed manually ~15:55)
+is considered INVALID/PILOT data, same status as the Aug 11 run (which
+lacked pcap). Reconnaissance category alone (ran first, before any
+block occurred) may be valid - worth checking in isolation.
+
+RECURRING OPERATIONAL ISSUE (separate from above): operator's home IP
+changes between sessions, requiring repeated updates to victim-sg
+security group (SSH/HTTP rules) and auto_response.py's KNOWN_SAFE_IPS.
+Consider a more permanent fix (e.g., a VPN with stable IP, or accepting
+a wider security-group rule with other compensating controls) before
+next session, since this consumed significant time today across
+multiple recovery cycles.
