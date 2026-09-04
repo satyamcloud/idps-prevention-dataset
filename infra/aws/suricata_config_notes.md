@@ -207,3 +207,33 @@ Consider a more permanent fix (e.g., a VPN with stable IP, or accepting
 a wider security-group rule with other compensating controls) before
 next session, since this consumed significant time today across
 multiple recovery cycles.
+
+
+## Bugs fixed and re-validated (2026-09-04, later same day)
+All three bugs from the earlier failed full-scale attempt fixed and
+confirmed working via a 3-session-per-category end-to-end test:
+
+1. hping3 root permission: master script now runs entire pipeline with
+   `sudo`, and invokes each category script via `sudo python3 ...`.
+   DoS-volumetric now shows correct ~10s durations (was 0.10s/failed).
+
+2. Cross-category iptables contamination: master script now flushes
+   victim's iptables before EVERY category via SSH (using a dedicated
+   keypair, attacker->victim, added to victim's authorized_keys).
+   CRITICAL SUB-BUG DISCOVERED: a plain flush blocks the attacker's own
+   management SSH connection once ANY block has occurred, creating a
+   catch-22 (attacker can't reach victim to clear the block that's
+   blocking it). FIXED by chaining flush + immediate re-insertion of a
+   protective ACCEPT rule for attacker's IP on port 22, in one command:
+   `iptables -F INPUT && iptables -I INPUT 1 -p tcp -s <attacker_ip>
+   --dport 22 -j ACCEPT`
+
+3. Hydra timeout not reliably killing hung stealthy-mode processes
+   (found 11 orphaned processes spanning ~1hr after the fact). Fixed by
+   wrapping hydra invocation with OS-level `timeout` command (same
+   pattern already used successfully in recon/DoS scripts) rather than
+   relying solely on subprocess.run(timeout=...).
+
+Validated via clean 18-session (3x6) test run - all categories showed
+expected durations, successful flushes before every category
+transition (including after active blocks), zero orphaned processes.

@@ -25,11 +25,12 @@ def run_bruteforce(session_num, attack_type, hydra_args, severity):
 
     outcome_note = attack_type
     try:
+        full_command = f"timeout {MAX_ATTACK_SECONDS} {command}"
         result = subprocess.run(
-            command.split(),
+            full_command.split(),
             capture_output=True,
             text=True,
-            timeout=MAX_ATTACK_SECONDS
+            timeout=MAX_ATTACK_SECONDS + 5
         )
         if "successfully completed" in result.stdout:
             outcome_note = f"{attack_type}_cracked"
