@@ -80,3 +80,17 @@ hitting this issue - would have saved significant debugging time.
 - Security level resets to "Impossible" on fresh DB creation - same as
   AWS, must be manually set to Low each time DB is recreated
 - Verified working: manual SQLi test (1' OR '1'='1) returned all 5 users
+
+
+## Attack scripts ported to GCP (2026-09-05)
+- attack_logger.py: adapted (LOG_PATH -> /home/satyamaws04/attack_log.json)
+- recon_attack.py: validated (loud + stealthy paths both confirmed)
+- bruteforce_attack.py: validated, custom rule sid 9000001 (same as AWS)
+- dos_volumetric_attack.py: validated, custom rule sid 9000002 (same as
+  AWS), sudo required from start (no permission bug repeat)
+- Remaining to port: dos_slowloris, web_attack, botnet_beacon
+- vsftpd + testuser configured (same credentials as AWS)
+- Suricata detected: unique GCP background noise signature "ET USER_AGENTS
+  Go HTTP Client User-Agent" / "ET INFO Go-http-client User-Agent
+  Observed Outbound" - likely GCP's own guest-agent/metadata service,
+  correctly caught by self-block protection throughout testing
