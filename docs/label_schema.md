@@ -131,3 +131,28 @@ DoS volumetric.
   DoS slow/L7 (detectable symptom exists, but no clean attacker-directed
   block possible without further custom rule engineering)
 - 25/25 attack_log entries logged successfully; no self-inflicted blocks
+
+
+## FIRST VALID FULL-SCALE RUN (2026-09-04, AWS)
+
+After two invalid attempts (Aug 11 - no pcap; Sep 4 morning - three
+pipeline bugs), a fully validated 210-session run completed successfully:
+
+- 35 sessions per category × 6 categories = 210 total
+- 7,138 response_log entries
+- 0 errors throughout entire run
+- Pcap logging enabled (first run with this - full feature extraction
+  now viable via NFStream)
+- All 3 previously-found bugs fixed and verified:
+  - sudo/raw-socket permissions (DoS volumetric)
+  - cross-category iptables contamination + flush catch-22
+  - Hydra timeout reliability
+- Confirmed resilient to operator access disruption (ran correctly
+  through an unrelated operator-IP lockout mid-run, since internal
+  attacker<->victim communication uses private IPs, independent of
+  operator's home IP)
+
+Backed up locally: attack_log.json, response_log.json, eve.json,
+pcap files, run_log_real.txt - in data/raw/aws_run_2026-09-04/
+
+THIS IS THE FIRST TRUSTWORTHY, PHASE-4-READY DATASET FROM THIS PROJECT.
