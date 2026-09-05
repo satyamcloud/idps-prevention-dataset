@@ -156,3 +156,15 @@ Backed up locally: attack_log.json, response_log.json, eve.json,
 pcap files, run_log_real.txt - in data/raw/aws_run_2026-09-04/
 
 THIS IS THE FIRST TRUSTWORTHY, PHASE-4-READY DATASET FROM THIS PROJECT.
+
+
+## FIRST VALID FULL-SCALE GCP RUN (2026-09-05)
+
+Completed 210-session (35x6) run on GCP, applying all lessons learned
+from AWS's earlier bug-fixing session:
+
+- All 3 critical bugs pre-emptively fixed before running (sudo escalation,
+  cross-category iptables flush with protected management SSH, timeout-
+  wrapped subprocess calls) - NONE recurred during this run
+- GCP-specific issues found and fixed: IAP firewall rule requirement,
+
