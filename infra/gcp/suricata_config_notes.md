@@ -68,3 +68,15 @@ hitting this issue - would have saved significant debugging time.
 - `nano` and `ping` (iputils-ping) not pre-installed on Ubuntu Minimal
   image - install as needed, same pattern as AWS's occasional missing
   packages
+
+
+## DVWA + Nginx setup (2026-09-05)
+- Nginx + PHP-FPM 8.5 + MariaDB (variation from AWS's Apache stack)
+- PHP-FPM socket: /run/php/php8.5-fpm.sock
+- Nginx site config: standard PHP-FPM passthrough via fastcgi_pass
+- DB: dvwa_user / dvwa_pass123 / dvwa database (same credentials as AWS
+  for consistency)
+- allow_url_include enabled in /etc/php/8.5/fpm/php.ini
+- Security level resets to "Impossible" on fresh DB creation - same as
+  AWS, must be manually set to Low each time DB is recreated
+- Verified working: manual SQLi test (1' OR '1'='1) returned all 5 users
