@@ -1,0 +1,16 @@
+
+============================================================
+AWS - action_taken distribution by window size
+============================================================
+Window +/-1s: 49/210 sessions have a matched response event (23.3%)
+Window +/-3s: 60/210 sessions have a matched response event (28.6%)
+Window +/-5s: 60/210 sessions have a matched response event (28.6%)
+Window +/-10s: 60/210 sessions have a matched response event (28.6%)
+
+============================================================
+GCP - action_taken distribution by window size
+============================================================
+Window +/-1s: 49/210 sessions have a matched response event (23.3%)
+Window +/-3s: 60/210 sessions have a matched response event (28.6%)
+Window +/-5s: 60/210 sessions have a matched response event (28.6%)
+Window +/-10s: 60/210 sessions have a matched response event (28.6%)

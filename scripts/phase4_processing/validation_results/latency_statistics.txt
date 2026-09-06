@@ -1,0 +1,38 @@
+Total flows with measured action_latency_seconds: 281117
+
+=== Overall latency stats (seconds) ===
+count    281117.000000
+mean          0.005980
+std           0.002874
+min           0.000651
+25%           0.003465
+50%           0.006003
+75%           0.008500
+max           0.011974
+Name: action_latency_seconds, dtype: float64
+
+=== Latency stats BY attack_category ===
+                    count      mean       std  ...       50%       75%       max
+attack_category                                ...                              
+bruteforce          258.0  0.006368  0.002874  ...  0.006807  0.008770  0.011974
+dos_volumetric   276278.0  0.005918  0.002852  ...  0.005924  0.008363  0.011912
+reconnaissance     4570.0  0.009687  0.001417  ...  0.008531  0.011423  0.011423
+web_attack           11.0  0.007114  0.001943  ...  0.007334  0.007334  0.010645
+
+[4 rows x 8 columns]
+
+=== Latency stats BY cloud ===
+          count      mean       std  ...       50%       75%       max
+cloud                                ...                              
+aws    143522.0  0.005781  0.002939  ...  0.005808  0.008269  0.011974
+gcp    137595.0  0.006188  0.002791  ...  0.006214  0.008531  0.011072
+
+[2 rows x 8 columns]
+
+=== Latency stats BY action_taken ===
+                    count      mean       std  ...       50%       75%       max
+action_taken                                   ...                              
+already_blocked  276235.0  0.005920  0.002853  ...  0.005924  0.008369  0.011974
+block_ip           4882.0  0.009398  0.001797  ...  0.008531  0.011423  0.011423
+
+[2 rows x 8 columns]

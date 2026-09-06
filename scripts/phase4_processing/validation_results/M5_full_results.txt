@@ -1,0 +1,34 @@
+
+============================================================
+AWS - Matching sensitivity analysis
+============================================================
+Sessions with boundary overlap (ambiguous flow-to-session matching): 0 / 210
+Window +/-1s: 0/7138 response events have multiple candidate session matches (0.00%)
+Window +/-3s: 0/7138 response events have multiple candidate session matches (0.00%)
+Window +/-5s: 0/7138 response events have multiple candidate session matches (0.00%)
+Window +/-10s: 0/7138 response events have multiple candidate session matches (0.00%)
+
+============================================================
+GCP - Matching sensitivity analysis
+============================================================
+Sessions with boundary overlap (ambiguous flow-to-session matching): 0 / 210
+Window +/-1s: 0/6874 response events have multiple candidate session matches (0.00%)
+Window +/-3s: 0/6874 response events have multiple candidate session matches (0.00%)
+Window +/-5s: 0/6874 response events have multiple candidate session matches (0.00%)
+Window +/-10s: 0/6874 response events have multiple candidate session matches (0.00%)
+
+============================================================
+AWS - action_taken distribution by window size
+============================================================
+Window +/-1s: 49/210 sessions have a matched response event (23.3%)
+Window +/-3s: 60/210 sessions have a matched response event (28.6%)
+Window +/-5s: 60/210 sessions have a matched response event (28.6%)
+Window +/-10s: 60/210 sessions have a matched response event (28.6%)
+
+============================================================
+GCP - action_taken distribution by window size
+============================================================
+Window +/-1s: 49/210 sessions have a matched response event (23.3%)
+Window +/-3s: 60/210 sessions have a matched response event (28.6%)
+Window +/-5s: 60/210 sessions have a matched response event (28.6%)
+Window +/-10s: 60/210 sessions have a matched response event (28.6%)

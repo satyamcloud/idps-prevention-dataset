@@ -71,3 +71,43 @@ The AWS and GCP labeling scripts (`merge_labels_aws.py` +
 `merge_labels_aws_stage2.py` + `fix_labels_aws.py` vs. the all-in-one
 `fix_labels_gcp.py`) grew organically and aren't structured identically.
 Both produce correct,
+
+
+## Validation scripts (added for peer-review response, 2026)
+
+These scripts address reviewer feedback on the baseline classification
+methodology and ground-truth labeling validation. Outputs are saved in
+`validation_results/`.
+
+- `baseline_model_v2.py` — session-level (not flow-level) train/test
+  split using GroupShuffleSplit, confirming zero session leakage.
+  Output: `validation_results/session_level_baseline.txt`
+
+- `baseline_model_v3_rigorous.py` — 5-fold session-grouped
+  cross-validation (GroupKFold) with explicit hyperparameters, random
+  seed, library versions, and a majority-class DummyClassifier
+  baseline for comparison. Excludes `false_positive_prevented` from
+  the classification target (too few samples - see label_schema.md).
+  Output: `validation_results/cv_rigorous_results.txt`
+
+- `cross_cloud_generalization.py` — trains on one cloud's flows,
+  tests on the other's, in both directions, to test whether the
+  learned model generalizes across environments (not just whether
+  label distributions are similar).
+  Output: `validation_results/cross_cloud_results.txt`
+
+- `matching_sensitivity_analysis.py` — measures ambiguity in the
+  session/response matching windows used during labeling (Section
+  3.5/3.6 of the paper): checks for session-boundary overlap and
+  counts response events with multiple candidate session matches
+  across window sizes +/-1s to +/-10s.
+  Output: `validation_results/matching_sensitivity_results.txt`
+
+- `window_distribution_sensitivity.py` — measures whether the
+  fraction of sessions with a matched response event changes as the
+  matching window size varies (+/-1s to +/-10s), to justify the
+  chosen +/-5s window rather than assert it arbitrarily.
+  Output: `validation_results/window_sensitivity_results.txt`
+
+- `M5_full_results.txt` — concatenation of the two matching-sensitivity
+  outputs above, as sent to paper drafting for the M5 reviewer response.

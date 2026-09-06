@@ -1,0 +1,18 @@
+
+============================================================
+AWS - Matching sensitivity analysis
+============================================================
+Sessions with boundary overlap (ambiguous flow-to-session matching): 0 / 210
+Window +/-1s: 0/7138 response events have multiple candidate session matches (0.00%)
+Window +/-3s: 0/7138 response events have multiple candidate session matches (0.00%)
+Window +/-5s: 0/7138 response events have multiple candidate session matches (0.00%)
+Window +/-10s: 0/7138 response events have multiple candidate session matches (0.00%)
+
+============================================================
+GCP - Matching sensitivity analysis
+============================================================
+Sessions with boundary overlap (ambiguous flow-to-session matching): 0 / 210
+Window +/-1s: 0/6874 response events have multiple candidate session matches (0.00%)
+Window +/-3s: 0/6874 response events have multiple candidate session matches (0.00%)
+Window +/-5s: 0/6874 response events have multiple candidate session matches (0.00%)
+Window +/-10s: 0/6874 response events have multiple candidate session matches (0.00%)

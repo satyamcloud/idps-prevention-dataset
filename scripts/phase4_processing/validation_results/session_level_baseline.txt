@@ -1,0 +1,33 @@
+Total rows: 288738
+Rows after excluding false_positive_prevented and dropping NaNs: 287458
+
+Target distribution:
+action_taken
+already_blocked         276235
+block_ip                  4882
+none                      3427
+blocked_no_new_alert      2914
+Name: count, dtype: int64
+
+Unique sessions: 408
+
+Training sessions: 326, Test sessions: 82
+Training rows: 235980, Test rows: 51478
+Session overlap between train/test (should be 0): 0
+
+==================================================
+OVERALL ACCURACY (session-level split): 0.9899
+==================================================
+
+Classification report:
+                      precision    recall  f1-score   support
+
+     already_blocked       1.00      1.00      1.00     47721
+            block_ip       0.91      0.79      0.85      1835
+blocked_no_new_alert       0.74      0.89      0.81      1255
+                none       1.00      1.00      1.00       667
+
+            accuracy                           0.99     51478
+           macro avg       0.91      0.92      0.91     51478
+        weighted avg       0.99      0.99      0.99     51478
+
