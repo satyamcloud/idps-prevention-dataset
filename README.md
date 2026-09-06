@@ -1,5 +1,7 @@
 # IDPS Prevention-Labeled Dataset
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22538007.svg)](https://doi.org/10.5281/zenodo.22538007)
+
 A closed-loop intrusion detection + prevention dataset capturing not just
 attack/benign classification, but the defender's actual response action,
 response latency, and outcome (including false-positive blocks) — across
@@ -37,13 +39,13 @@ independently across two cloud environments.
 
 ## Status
 
-**Complete**: full 6-category attack infrastructure on both AWS and GCP;
-validated full-scale data collection (210 sessions/cloud, 0 errors);
-feature extraction and label-merging pipeline (Phase 4); baseline model
-sanity check; documented limitations.
+**Complete and released**: full 6-category attack infrastructure on both
+AWS and GCP; validated full-scale data collection (210 sessions/cloud,
+0 errors); feature extraction and label-merging pipeline (Phase 4);
+baseline model sanity check; documented limitations. Dataset published
+on Zenodo: https://doi.org/10.5281/zenodo.22538007
 
-**Pending**: dataset upload to Zenodo/IEEE DataPort with DOI; university
-IPR/licensing confirmation; paper writing.
+**Pending**: paper writing and submission.
 
 ## Quick start (reproducing the dataset from raw data)
 
