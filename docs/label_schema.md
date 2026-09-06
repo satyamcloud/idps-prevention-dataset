@@ -200,3 +200,31 @@ dos_slow_l7 and botnet_beacon show 100% "none" (genuine non-detection),
 reconnaissance and web_attack show the blocked_no_new_alert refinement
 correctly applied, dos_volumetric/bruteforce dominated by
 already_blocked as expected.
+
+
+## False-positive-prevention labeling (2026-09-06)
+
+Added `false_positive_prevented` outcome label: benign victim-side
+traffic that triggered a Suricata alert but was correctly NOT blocked
+due to KNOWN_SAFE_IPS self-protection.
+
+RESULT ASYMMETRY (verified, not a bug): GCP run shows 34 such events;
+AWS run shows 0. Investigated and confirmed: all of AWS's
+skipped_self_block_protection events in response_log.json occurred
+during EARLIER testing/debugging (before 16:55), not during the actual
+valid collection window (17:02-21:25) - meaning zero false-positive-
+triggering background noise happened to occur during AWS's clean run,
+while GCP's run did experience such traffic (Go HTTP Client / APT
+update checks) during its live collection window.
+
+This is legitimate cross-cloud variation in background traffic
+patterns, not a labeling bug - confirmed via direct timestamp
+comparison between protection events and flow date ranges.
+
+Final action_taken categories (v3, final):
+- block_ip: fresh detection + block
+- already_blocked: repeat alert while IP already blocked
+- blocked_no_new_alert: IP blocked, no fresh alert matched this flow
+- false_positive_prevented: benign flow that WOULD have been blocked
+  without self-protection safeguard
+- none: genuinely never detected (dos_slow_l7, botnet_beacon primarily)
