@@ -259,3 +259,38 @@ environment-specific artifacts.
 
 File: data/processed/final_combined_dataset.csv (not committed to git -
 regeneratable via combine_final_dataset.py from raw data in data/raw/)
+
+
+## Baseline model sanity check (Safeguard 5) - 2026-09-06
+
+RandomForest trained on 12 raw NFStream network features (ports,
+byte/packet counts, durations, protocol) predicting action_taken.
+
+RESULT: 99.55% overall accuracy - INVESTIGATED rather than accepted
+at face value, per Safeguard 5. Found: this headline figure is
+dominated by trivial separability of the two largest classes:
+- already_blocked: 99.98% is dos_volumetric (bare SYN packets,
+  near-zero duration, port 80 only - trivially distinct signature)
+- none: dominated by benign + botnet_beacon + dos_slow_l7 (all
+  share a "quiet, low-packet-count" profile distinct from floods)
+
+The HARDER, more novel labels show appropriately IMPERFECT performance,
+indicating genuine (non-trivial) learnable signal rather than leakage:
+- block_ip: precision 0.87, recall 0.86 (976 test samples)
+- blocked_no_new_alert: precision 0.78, recall 0.79 (583 test samples)
+- false_positive_prevented: precision 0.86, recall 0.86 (only 7 test
+  samples - too few to draw reliable conclusions, flagged as a known
+  limitation given the low false_positive_prevented count of 34 total)
+
+CONCLUSION: dataset behaves like real network data, not a trivially
+solvable artifact. The overall accuracy figure should NOT be reported
+in isolation in the paper - report per-class metrics, and explicitly
+discuss the class-imbalance-driven inflation of the headline number,
+framing this as a demonstrated methodological rigor point (Safeguard
+5 caught and investigated a misleading top-line metric).
+
+LIMITATION TO NOTE: false_positive_prevented class has only 34 total
+samples (all GCP) - too small for robust classification; useful as a
+qualitative/descriptive finding (documented rate of averted false
+positives) rather than a quantitative classification target in its
+own right.
