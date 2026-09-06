@@ -41,5 +41,13 @@ https://github.com/satyamcloud/idps-prevention-dataset
 
 ## License
 
-[To be decided - likely CC-BY 4.0 for the dataset, MIT or similar for
-code - confirm before release]
+This dataset is released under the **Creative Commons Attribution 4.0
+International License (CC-BY 4.0)**. You are free to share and adapt
+this dataset for any purpose, including commercially, provided
+appropriate credit is given (see Citation section).
+
+Full license text: https://creativecommons.org/licenses/by/4.0/
+
+## Copyright
+
+© 2026 Satyam Shivam Sunderam, Dr. Sunil Kumar Khatri, Dr. Ankur Garg
