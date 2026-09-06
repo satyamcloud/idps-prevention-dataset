@@ -37,7 +37,10 @@ https://github.com/satyamcloud/idps-prevention-dataset
 
 ## Citation
 
-[To be added upon publication]
+Satyam Shivam Sunderam, Sunil Kumar Khatri, & Ankur Garg. (2026). IDPS
+Prevention-Labeled Dataset: Multi-Cloud Network Flow Data with
+Fine-Grained Response-Action Labeling [Data set]. Zenodo.
+https://doi.org/10.5281/zenodo.22538007
 
 ## License
 
