@@ -168,3 +168,35 @@ from AWS's earlier bug-fixing session:
   wrapped subprocess calls) - NONE recurred during this run
 - GCP-specific issues found and fixed: IAP firewall rule requirement,
 
+
+## Phase 4 label-merging methodology (2026-09-06)
+
+Three-stage labeling pipeline built and validated on both clouds:
+1. Session matching: flows matched to attack_log.json sessions by
+   src_ip + time window (+/-2s buffer) + target_port if specified
+2. Response matching: matched flows checked against response_log.json
+   for a corresponding action within +/-5s of flow start
+3. Block-state reconstruction: CRITICAL FIX - stage 2 alone mislabels
+   flows as "none" (no action) when a category's first session already
+   triggered a block that persists (no flush) for the rest of the
+   category's sessions - later sessions' flows show "none" simply
+   because no NEW alert fired, not because detection/blocking failed.
+   Fixed by reconstructing block-state-over-time from block_ip events
+   and flush timestamps (found in run_log_real.txt), and relabeling
+   "none" -> "blocked_no_new_alert" wherever the IP was actually
+   blocked at that flow's timestamp.
+
+Final action_taken categories: block_ip (fresh detection+block),
+already_blocked (repeat alert while blocked), blocked_no_new_alert
+(IP blocked, but no fresh alert matched this specific flow),
+none (genuinely never detected/blocked - e.g. dos_slow_l7, botnet_beacon)
+
+This distinction matters for dataset accuracy: "none" now correctly
+means "genuinely undetected", not conflating it with "blocked but
+Suricata's per-signature throttling suppressed a fresh alert".
+
+Validated consistent pattern across BOTH clouds independently:
+dos_slow_l7 and botnet_beacon show 100% "none" (genuine non-detection),
+reconnaissance and web_attack show the blocked_no_new_alert refinement
+correctly applied, dos_volumetric/bruteforce dominated by
+already_blocked as expected.
