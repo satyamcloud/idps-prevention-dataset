@@ -228,3 +228,34 @@ Final action_taken categories (v3, final):
 - false_positive_prevented: benign flow that WOULD have been blocked
   without self-protection safeguard
 - none: genuinely never detected (dos_slow_l7, botnet_beacon primarily)
+
+
+## FINAL DATASET STATISTICS (2026-09-06)
+
+Total: 288,738 labeled flow records (AWS: 147,852 / GCP: 140,886)
+
+| Category | Cloud | already_blocked | block_ip | blocked_no_new_alert | false_positive_prevented | none |
+|---|---|---|---|---|---|---|
+| benign | aws | 0 | 0 | 0 | 0 | 1166 |
+| benign | gcp | 0 | 0 | 0 | 34 | 80 |
+| botnet_beacon | aws | 0 | 0 | 0 | 0 | 247 |
+| botnet_beacon | gcp | 0 | 0 | 0 | 0 | 247 |
+| bruteforce | aws | 125 | 4 | 0 | 0 | 0 |
+| bruteforce | gcp | 125 | 4 | 0 | 0 | 0 |
+| dos_slow_l7 | aws | 0 | 0 | 0 | 0 | 1460 |
+| dos_slow_l7 | gcp | 0 | 0 | 0 | 0 | 1473 |
+| dos_volumetric | aws | 141415 | 147 | 0 | 0 | 0 |
+| dos_volumetric | gcp | 134568 | 148 | 0 | 0 | 0 |
+| reconnaissance | aws | 0 | 1826 | 1285 | 0 | 0 |
+| reconnaissance | gcp | 0 | 2744 | 1285 | 0 | 0 |
+| web_attack | aws | 0 | 5 | 172 | 0 | 0 |
+| web_attack | gcp | 2 | 4 | 172 | 0 | 0 |
+
+KEY FINDING: strong cross-cloud consistency in detection/response
+behavior (bruteforce identical 125/4 split both clouds;
+dos_slow_l7/botnet_beacon both 100% "none" both clouds) - suggests
+findings reflect genuine signature-based IDS properties, not
+environment-specific artifacts.
+
+File: data/processed/final_combined_dataset.csv (not committed to git -
+regeneratable via combine_final_dataset.py from raw data in data/raw/)
