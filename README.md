@@ -45,8 +45,6 @@ AWS and GCP; validated full-scale data collection (210 sessions/cloud,
 baseline model sanity check; documented limitations. Dataset published
 on Zenodo: https://doi.org/10.5281/zenodo.22538007
 
-**Pending**: paper writing and submission.
-
 ## Quick start (reproducing the dataset from raw data)
 
 1. See `infra/aws/` and `infra/gcp/` for environment setup
