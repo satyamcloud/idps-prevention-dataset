@@ -4,7 +4,10 @@ event-level latency, session coverage). Run from the repository root:
     python scripts/phase4_processing/reviewer_analyses.py release_package/RELEASE_dataset_v1.csv \
         scripts/phase4_processing/validation_results/reviewer_analyses_results.json
 Uses the same features, GroupKFold(5) by session_id, RF(n_estimators=100, random_state=42)
-as scripts/phase4_processing/baseline_model_v3_rigorous.py."""
+as scripts/phase4_processing/baseline_model_v3_rigorous.py.
+Note: the fold assignment of GroupKFold depends on the scikit-learn version. The paper's tables were produced
+with scikit-learn 1.9.x; with 1.7.2 eight block_ip flows fall in a different fold and the RF macro-F1 is 94.0%
+instead of 95.0% (accuracy 99.62% vs 99.61%). Use scikit-learn 1.9.x to reproduce the paper's numbers exactly."""
 import sys, json, warnings
 import numpy as np, pandas as pd
 from sklearn.model_selection import GroupKFold
