@@ -39,8 +39,12 @@
   - `false_positive_prevented`: benign victim-side traffic that triggered an
     alert but was correctly NOT blocked (self-protection safeguard)
   - `none`: no detection and no block occurred for this flow
-- `action_latency_seconds`:  time between Suricata's alert and the response
-  script's action, in seconds. Null where action_taken is "none",
+- `action_latency_seconds`:  alert-to-response-initiation latency, in seconds:
+  the time from the Suricata alert timestamp to the moment the response
+  script recorded its action (response_timestamp minus alert_timestamp). It
+  excludes the time the firewall (iptables) needs to enforce a block and any
+  delay before the alert itself. It is a property of the response record, so
+  flows that share one response record share the same value. Null where action_taken is "none",
   "blocked_no_new_alert", or "false_positive_prevented" - in all three
   cases, no block action occurred for this specific flow, so no
   action-latency applies (false_positive_prevented flows DO have a
